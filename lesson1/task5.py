@@ -2,7 +2,7 @@ print('---')
 
 proceeds = int(input('Введите выручку фирмы: '))
 costs = int(input('Введите издержки фирмы: '))
-cash = proceeds / costs
+cash = (proceeds / costs) * 100
 if proceeds > costs:
     print('Фирма рентабельна.')
     print(f'Прибыль фирмы: {cash:.2f}')

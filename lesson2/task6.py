@@ -29,47 +29,50 @@ name = None
 price = None
 quantity = None
 unit = None
-finish = "y"
-q = "n"
+finish = "n"
+q = "y"
 while finish != q:
     if name is None:
         ask = input('Введите название товара: ')
         if not ask.isalnum():
-            print('Наименование товара не может быть пустым. Попробуйте еще раз.')
+            print('Название!')
             continue
         name = ask
 
     if price is None:
-        ask = int(input('Введите стоимость товара: '))
-        continue
-    price = ask
+        ask = input('Введите стоимость товара: ')
+        if not ask.isdigit():
+            print('Неверно, давай без копеек.')
+            continue
+        price = ask
 
     if quantity is None:
-        ask = int(input('Введите количество: '))
-        continue
-    quantity = ask
+        ask = input('Введите количество: ')
+        if not ask.isdigit():
+            print('Можно только целое число.')
+            continue
+        quantity = ask
 
     if unit is None:
         ask = input('Введите единицы измерения: ')
         if not ask.isalpha():
-            print('Единица изменерения не может быть пустой. Попробуйте еще раз.')
+            print('Неверно.')
             continue
-    unit = ask
+        unit = ask
 
     features.append((num, {'name': name, 'price': price, 'quantity': quantity, 'unit': unit}))
-
-    title = None
+    print(features)
+    name = None
     price = None
-    amount = None
+    quantity = None
+    unit = None
     num += 1
 
-    print(features)
+    q = input('Подолжаем? (y/n)) ').lower()
 
-    q = input('Формирование списка завершено? (y/n)) ').lower()
+analytics = {'name': [], 'price': [], 'quantity': [], 'unit': []}
 
-analytics = {'title': [], 'price': [], 'quantity': [], 'unit': []}
-
-for _, item in features:
+for key, item in features:
     analytics['name'].append(item['name'])
     analytics['price'].append(item['price'])
     analytics['quantity'].append(item['quantity'])

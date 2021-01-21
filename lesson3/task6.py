@@ -4,3 +4,6 @@
 '''
 
 
+#def
+#.lower()
+#.title()

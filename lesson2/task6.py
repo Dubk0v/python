@@ -22,5 +22,57 @@
 }
 '''
 
-features = {'title': '', 'price': '', 'quantity': '', 'unit': ''}
+
+features = []
+num = 1
+name = None
+price = None
+quantity = None
+unit = None
+finish = "y"
+q = "n"
+while finish != q:
+    if name is None:
+        ask = input('Введите название товара: ')
+        if not ask.isalnum():
+            print('Наименование товара не может быть пустым. Попробуйте еще раз.')
+            continue
+        name = ask
+
+    if price is None:
+        ask = int(input('Введите стоимость товара: '))
+        continue
+    price = ask
+
+    if quantity is None:
+        ask = int(input('Введите количество: '))
+        continue
+    quantity = ask
+
+    if unit is None:
+        ask = input('Введите единицы измерения: ')
+        if not ask.isalpha():
+            print('Единица изменерения не может быть пустой. Попробуйте еще раз.')
+            continue
+    unit = ask
+
+    features.append((num, {'name': name, 'price': price, 'quantity': quantity, 'unit': unit}))
+
+    title = None
+    price = None
+    amount = None
+    num += 1
+
+    print(features)
+
+    q = input('Формирование списка завершено? (y/n)) ').lower()
+
 analytics = {'title': [], 'price': [], 'quantity': [], 'unit': []}
+
+for _, item in features:
+    analytics['name'].append(item['name'])
+    analytics['price'].append(item['price'])
+    analytics['quantity'].append(item['quantity'])
+    analytics['unit'].append(item['unit'])
+
+print(analytics)

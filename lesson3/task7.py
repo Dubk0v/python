@@ -6,7 +6,6 @@
 Используйте написанную ранее функцию int_func().
 '''
 
-#def
-#.lower()
-#.title()
-#for
+import task6
+sentence = input('Введите слова: ')
+task6.title(sentence)

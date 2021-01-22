@@ -4,6 +4,9 @@
 '''
 
 
-#def
-#.lower()
-#.title()
+def title(word):
+    print(word.title())
+
+
+ask_word = input('Введите слово: ')
+title(ask_word)

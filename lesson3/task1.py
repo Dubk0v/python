@@ -3,7 +3,18 @@
 Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
 '''
 
-# def
-# try
-# except
 
+def my_func(a, b):
+
+    try:
+        c = int(a) / int(b)
+        print(c)
+    except ZeroDivisionError:
+        print('На 0 делить нельзя!!!')
+    except ValueError:
+        print('Введи число!!!')
+
+
+x = input('x:')
+y = input('y:')
+my_func(x, y)

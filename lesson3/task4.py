@@ -9,5 +9,21 @@
 предусматривающая использование цикла.
 '''
 
-#def
-''' исключить **'''
+
+def exponentiation(a, b):
+    c = a ** b
+    print(c)
+
+
+def mat_exponentiation(a, b):
+    ''' исключить **'''
+    c = a
+    for i in range(1, -b):
+        a *= c
+    print(1 / a)
+
+
+x = int(input('x'))
+y = int(input('y'))
+exponentiation(x, y)
+mat_exponentiation(x, y)

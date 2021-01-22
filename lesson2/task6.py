@@ -24,7 +24,7 @@
 
 
 features = []
-num = 1
+
 name = None
 price = None
 quantity = None
@@ -60,22 +60,23 @@ while finish != q:
             continue
         unit = ask
 
-    features.append((num, {'name': name, 'price': price, 'quantity': quantity, 'unit': unit}))
-    print(features)
+    features.append({'name': name, 'price': price, 'quantity': quantity, 'unit': unit})
+    for ind, line in enumerate(features, 1):
+        print(ind, line)
     name = None
     price = None
     quantity = None
     unit = None
-    num += 1
 
     q = input('Подолжаем? (y/n)) ').lower()
 
 analytics = {'name': [], 'price': [], 'quantity': [], 'unit': []}
 
-for key, item in features:
+for item in features:
     analytics['name'].append(item['name'])
     analytics['price'].append(item['price'])
     analytics['quantity'].append(item['quantity'])
     analytics['unit'].append(item['unit'])
 
-print(analytics)
+for line in analytics.items():
+    print(line)

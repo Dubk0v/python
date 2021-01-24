@@ -23,7 +23,7 @@ def mat_exponentiation(a, b):
     print(1 / a)
 
 
-x = int(input('x'))
-y = int(input('y'))
+x = int(input('Введите положительное число x: '))
+y = int(input('Введите отрицательное число y: '))
 exponentiation(x, y)
 mat_exponentiation(x, y)

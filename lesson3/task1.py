@@ -15,6 +15,6 @@ def my_func(a, b):
         print('Введи число!!!')
 
 
-x = input('x:')
-y = input('y:')
+x = input('Введите число:')
+y = input('Введите на сколько по делить:')
 my_func(x, y)

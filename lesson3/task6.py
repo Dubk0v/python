@@ -5,8 +5,17 @@
 
 
 def title(word):
-    print(word.title())
+    z = True
+    while z:
+        if not word.isalpha():
+            word = input('Слово и нечего более: ')
+        else:
+            z = False
+            #word = word.capitalize()
+            #word = word.title()
+            word = word[0].upper() + word[1:]
+    return word
 
 
-ask_word = input('Введите слово: ')
-title(ask_word)
+ask_word = input('Введите слово: ').lower()
+print(title(ask_word))

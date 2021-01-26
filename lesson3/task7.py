@@ -8,21 +8,20 @@
 
 
 def all_title(sentence):
-    while True:
-        words = []
-        for word in sentence.split():
-            if not word.isalpha():
-                for ind, i in enumerate(word):
-                    if not i.isalpha():
-                        continue
-                    else:
-                        word = word[:ind] + word[ind].upper() + word[ind + 1:]
-                        words.append(word)
-                        break
-            else:
-                word = word[0].upper() + word[1:]
-                words.append(word)
-        return ' '.join(list(words))
+    words = []
+    for word in sentence.split():
+        if not word.isalpha():
+            for ind, i in enumerate(word):
+                if not i.isalpha():
+                    continue
+                else:
+                    word = word[:ind] + word[ind].upper() + word[ind + 1:]
+                    words.append(word)
+                    break
+        else:
+            word = word[0].upper() + word[1:]
+            words.append(word)
+    return ' '.join(list(words))
     #return sentence.title()
 
 

@@ -8,13 +8,13 @@ def my_func(a, b):
 
     try:
         c = int(a) / int(b)
-        print(c)
+        return c
     except ZeroDivisionError:
-        print('На 0 делить нельзя!!!')
+        return 'На 0 делить нельзя!!!'
     except ValueError:
-        print('Введи число!!!')
+        return 'Введи число!!!'
 
 
 x = input('Введите число:')
 y = input('Введите на сколько по делить:')
-my_func(x, y)
+print(my_func(x, y))

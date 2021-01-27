@@ -6,5 +6,12 @@
 Подсказка: использовать функцию reduce().
 '''
 
+from functools import reduce
 
 
+def multiplication(el_prev, el):
+    return el_prev * el
+
+
+given_list = [el for el in range(100, 1001, 2)]
+print(reduce(multiplication, given_list))

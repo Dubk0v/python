@@ -12,5 +12,6 @@
 from random import randint
 
 given_list = [randint(1, 20) for i in range(15)]
+#given_list = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11] #for check
 result = [el for el in given_list if given_list.count(el) < 2]
 print(f'Ввыданый список {given_list} \nПосле форматирования {result}')

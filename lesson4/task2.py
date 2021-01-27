@@ -12,6 +12,6 @@
 from random import randint
 
 given_list = [randint(0, 100) for i in range(20)]
-#given_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55] '''для проверки'''
-result = [el for el in given_list if given_list[given_list.index(el) - 1] < el and given_list.index(el) != 0]
+#given_list = [91, 55, 42, 73, 87, 51, 51, 16, 9, 63, 12, 34, 58, 8, 51, 34, 3, 7, 73, 51] #[300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55] #'''для проверки'''
+result = [el for ind, el in enumerate(given_list) if given_list[ind - 1] < el and ind != 0]
 print(f'Ввыданый список {given_list} \nПосле форматирования {result}')

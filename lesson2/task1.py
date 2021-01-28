@@ -9,4 +9,3 @@ example = [77, [-77], (-77, -777), {-77}, 7.7, True, 'False', None]
 
 for ex in example:
     print(ex, type(ex))
-

@@ -14,6 +14,23 @@
 
 from itertools import count
 from itertools import cycle
+from sys import argv
+
+def my_cycle(a):
+    for el in cycle("ABC"):
+        if a > 10:
+            break
+        print(el)
+        a += 1
 
 
-print(cycle(1, 2))
+def my_count(a):
+    for el in count(a):
+        if el > 10:
+            break
+        else:
+            print(el)
+
+
+my_cycle(int(argv[1]))
+my_count(int(argv[2]))

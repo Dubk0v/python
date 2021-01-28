@@ -8,5 +8,28 @@
 Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 '''
 
+# from math import factorial
+from itertools import count
+# x = int(input('факториал от какого числа?'))
+# print(factorial(x))
 
 
+# def fact(a):
+#     c = 1
+#     for b in range(1, a + 1):
+#         c *= b
+#         yield c
+def fact(a):
+    c = 1
+    for b in count(1):
+        if b <= a:
+            c *= b
+            yield c
+    return c
+
+
+z = int(input('Введите число: '))
+y = 0
+for el in fact(z):
+    y += 1
+    print(f'{y}! равен {el}')

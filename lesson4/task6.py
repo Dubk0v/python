@@ -12,5 +12,8 @@
 при котором повторение элементов списка прекратится.
 '''
 
+from itertools import count
+from itertools import cycle
 
 
+print(cycle(1, 2))

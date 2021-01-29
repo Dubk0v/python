@@ -9,3 +9,17 @@
 Петров 13749.32
 '''
 
+
+with open('task3.txt', 'r') as mfl:
+    surname = []
+    salary = []
+    for line in mfl.read().split('\n'):
+        if float(line.split()[1]) < 20000:
+            surname.append(line.split()[0])
+        salary.append(line.split()[1])
+print(salary)
+print(surname)
+#     print(surname, salary / len(salary))
+# print(surname)
+# print(salary)
+

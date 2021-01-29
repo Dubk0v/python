@@ -1,0 +1,10 @@
+ivanov 12089.43 
+semenov 34595.3 
+sergeev 14332.55 
+belov 90648.12 
+dushko 54321.22 
+vishnev 9983.33 
+tashkov 12313.23 
+vasukov 72343.42 
+shoshkov 25678.66 
+vinigradov 39123.17

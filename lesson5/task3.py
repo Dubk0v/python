@@ -20,5 +20,3 @@ with open('task3.txt', 'r') as mfl:
 average_salary = (sum(map(float, salary)) / len(salary))
 
 print(f'{surname} у них зарплата меньше 20000. средняя зарплата: {"%.2f" % average_salary}')
-
-

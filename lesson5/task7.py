@@ -23,7 +23,7 @@
 from json import dumps
 
 results = [{}, {}]
-with open('task7.txt', encoding='utf-8') as fhs:
+with open('task7.txt', 'r', encoding='utf-8') as fhs:
     for line in fhs.readlines():
         firma, tmp, proceeds, costs = line.split()
         results[0][firma] = int(proceeds) - int(costs)

@@ -15,7 +15,7 @@
 '''
 
 subjects = {}
-with open('task6.txt', encoding='utf-8') as info:
+with open('task6.txt', 'r', encoding='utf-8') as info:
     for line in info.readlines():
         numz = line.replace('(', ' ').split()
         subjects[numz[0][:-1]] = sum(int(i) for i in numz if i.isdigit())

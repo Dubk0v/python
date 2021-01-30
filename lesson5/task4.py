@@ -10,3 +10,23 @@ Four — 4
 Новый блок строк должен записываться в новый текстовый файл.
 '''
 
+rus = ['Один', 'Два', 'Три', 'Четыре']
+
+with open('task4.txt', 'r') as eng:
+    eng_list = []
+    for line in eng:
+        eng_list.append(line.split())
+    for i, key in enumerate(eng_list):
+        key[0] = rus[i]
+with open('task4-1.txt', 'w') as edit:
+    for edit_list in eng_list:
+        edit.writelines(f'{" ".join(edit_list)} \n')
+
+
+
+
+
+
+
+
+

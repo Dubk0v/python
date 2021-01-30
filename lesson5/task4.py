@@ -21,12 +21,3 @@ with open('task4.txt', 'r') as eng:
 with open('task4-1.txt', 'w') as edit:
     for edit_list in eng_list:
         edit.writelines(f'{" ".join(edit_list)} \n')
-
-
-
-
-
-
-
-
-

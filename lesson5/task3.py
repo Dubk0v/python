@@ -17,6 +17,8 @@ with open('task3.txt', 'r') as mfl:
         if float(line.split()[1]) < 20000:
             surname.append(line.split()[0])
         salary.append(line.split()[1])
-print(f'{surname} у них зарплата меньше 20000. средняя зарплата: {sum(map(float, salary)) / len(salary)}')
+average_salary = (sum(map(float, salary)) / len(salary))
+
+print(f'{surname} у них зарплата меньше 20000. средняя зарплата: {"%.2f" % average_salary}')
 
 

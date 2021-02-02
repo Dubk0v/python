@@ -27,8 +27,9 @@ with open('task7.txt', 'r', encoding='utf-8') as fhs:
     for line in fhs.readlines():
         firma, tmp, proceeds, costs = line.split()
         results[0][firma] = int(proceeds) - int(costs)
-
-results[1]['average_profit'] = round(sum(profit for trash, profit in results[0].items() if profit > 0) / len(results[0]))
+divisor = [profit for profit in results[0].values() if profit > 0]
+results[1]['average_profit'] = sum(divisor) / len(divisor)
+# results[1]['average_profit'] = round(sum(profit for profit in results[0].values() if profit > 0) / len(divisor))
 
 with open('task7.json', "w", encoding='utf-8') as fhd:
     fhd.write(dumps(results))

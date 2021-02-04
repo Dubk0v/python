@@ -46,5 +46,5 @@ class TrafficLight:
             sleep(time)
 
 
-trafficlight = TrafficLight()
-trafficlight.running()
+TrafficLight = TrafficLight()
+TrafficLight.running()

@@ -13,3 +13,38 @@
 При его нарушении выводить соответствующее сообщение и завершать скрипт.
 '''
 
+from time import sleep
+
+# class TrafficLight:
+#     __color = ['Красный', 'Желтый', 'Зеленый']
+#
+#     def running(self):
+#         i = 0
+#         while i < 3:
+#             print(f'Светофор зажог - {TrafficLight.__color[i]}')
+#             if i == 0:
+#                 sleep(7)
+#             elif i == 1:
+#                 sleep(5)
+#             elif i == 2:
+#                 sleep(3)
+#             i += 1
+#
+#
+# TrafficLight = TrafficLight()
+# TrafficLight.running()
+
+
+class TrafficLight:
+    __states = {'Красный': 7, 'Желтый': 2, 'Зеленый': 12}
+    __color = ''
+
+    def running(self):
+        for color, time in self.__states.items():
+            self.__color = color
+            print(f'Светофор зажог - {self.__color} на {time} секунд')
+            sleep(time)
+
+
+trafficlight = TrafficLight()
+trafficlight.running()

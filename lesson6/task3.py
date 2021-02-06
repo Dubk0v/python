@@ -30,8 +30,8 @@ class Position(Worker):
         return f'{self.name} {self.surname}'
 
     def get_total_income(self):
-        return self._income.get('wage') + self._income.get('bonus')
-        # return f'{sum(self._income.values())}'
+        return f'{sum(self._income.values())}'
+        # return self._income.get('wage') + self._income.get('bonus')
 
 
 test = Position('Васька', 'Пупкин', 'Слесарь', 50000, 10000)

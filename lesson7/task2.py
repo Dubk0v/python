@@ -11,3 +11,46 @@
 проверить на практике работу декоратора @property.
 '''
 
+
+class Textiles:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def get_c(self):
+        return f'{"%.2f" % (self.width / 6.5 + 0.5)}'
+
+    def get_s(self):
+        return f'{"%.2f" % (self.height * 2 + 0.3)}'
+
+    @property
+    def get_full(self):
+        return f'общий расход ткани: {float(self.get_c()) + float(self.get_s())}'
+
+
+class Coat(Textiles):
+    def __init__(self, width):
+        self.width = width
+        self._c = round(self.width / 6.5 + 0.5)
+
+    def __str__(self):
+        return f'расход ткани на пальто: {self._c}'
+
+
+class Suit(Textiles):
+    def __init__(self, height):
+        self.height = height
+        self._s = round(self.height * 2 + 0.3)
+
+    def __str__(self):
+        return f'расход ткани на костюм: {self._s}'
+
+
+coat = Coat(90)
+suit = Suit(180)
+print(coat)
+print(suit)
+print(coat.get_full)
+print(suit.get_full)
+print(coat.get_c())
+print(suit.get_s())

@@ -26,7 +26,7 @@
 
 
 class Cell:
-    def __init__(self, count: int):
+    def __init__(self, count):
         self._count = count
 
     def __add__(self, other):
@@ -56,11 +56,10 @@ c1 = Cell(17)
 print(c1)
 c2 = Cell(13)
 print(c2)
-
 print(c1 + c2)
 print(c1 - c2)
 print(c2 - c1)
 print(c2 - c2)
 print(c1 * c2)
 print(c1 / c2)
-print((c1 * c2).make_order(22))
+print(c1.make_order(10))

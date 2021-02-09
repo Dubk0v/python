@@ -18,14 +18,14 @@ class Textiles:
         self.height = height
 
     def get_c(self):
-        return f'{"%.2f" % (self.width / 6.5 + 0.5)}'
+        return self.width / 6.5 + 0.5
 
     def get_s(self):
-        return f'{"%.2f" % (self.height * 2 + 0.3)}'
+        return self.height * 2 + 0.3
 
     @property
     def get_full(self):
-        return f'общий расход ткани: {float(self.get_c()) + float(self.get_s())}'
+        return f'общий расход ткани: {round(self.get_c() + self.get_s())}'
 
 
 class Coat(Textiles):
@@ -46,11 +46,10 @@ class Suit(Textiles):
         return f'расход ткани на костюм: {self._s}'
 
 
-coat = Coat(90)
+coat = Coat(56)
 suit = Suit(180)
 print(coat)
 print(suit)
-print(coat.get_full)
-print(suit.get_full)
+print(Textiles(56, 180).get_full)
 print(coat.get_c())
 print(suit.get_s())

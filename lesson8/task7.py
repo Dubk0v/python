@@ -46,7 +46,7 @@ class ComplexNumber:
 
     def __mul__(self, other):
         print(f'Произведение z1 и z2 равно')
-        return f'z = {self.a * other.a + (self.b * other.b)} * {self.b * other.a}'
+        return f'z = {self.a * other.a - (self.b * other.b)} * {self.b * other.a}'
 
     def __str__(self):
         return f'z = {self.a} + {self.b}'

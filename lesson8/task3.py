@@ -24,7 +24,7 @@ class NumberError(Exception):
         return self.text
 
 
-my_list = []
+ask_list = []
 
 while True:
     ask = input("Введите целое число для заполнения списка, или 'stop' для выхода: ")
@@ -36,9 +36,9 @@ while True:
         if not ask.isdigit():
             raise NumberError(f"'{ask}' не соответствует запросу, введите целое число")
 
-        my_list.append(int(ask))
+        ask_list.append(int(ask))
     except NumberError as e:
         print(e)
 
-print(my_list)
+print(ask_list)
 

@@ -74,6 +74,6 @@ class Xerox(OfficeEquipment):
         return f'ксерокопировать что нибудь  {self.numb} раз)'
 
 
-unity = Printer('hp', 2000, 5, 10)
+unity = Printer('samsung', 13500, 5, 10)
 print(unity.reception())
 print(unity.to_print())
